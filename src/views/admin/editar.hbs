@@ -1,0 +1,28 @@
+<div class=" w-25 mt-5 mx-auto">
+<h4 class="text-center">Editar Usuario <i style="color: rgb(1, 81, 255);" class="fas fa-user-plus"></i></h4>
+</div>
+
+<hr>
+
+<form method="POST" action="/editar/{{cadastros._id}}" class="w-50 mx-auto mt-4">    
+
+    <div class="form-group">
+    <label>Nome:</label>
+    <input type="text" class="form-control" value="{{cadastros.nome}}" id="nome" name="nome" placeholder="Seu nome">    
+    </div>
+
+    <div class="form-group">
+    <label>Idade:</label>
+    <input type="number" class="form-control" value="{{cadastros.idade}}" id="idade" name="idade" placeholder="Sua idade">    
+    </div> 
+
+    <div class="form-group">
+    <label>Email:</label>
+    <input type="email" class="form-control" value="{{cadastros.email}}" id="email" name="email" placeholder="Seu email">    
+    </div>
+  
+        <a>
+        <button type="submit" class="btn btn-outline-dark">Editar <i class="fas fa-check"></i></button>
+        </a>
+
+</form>

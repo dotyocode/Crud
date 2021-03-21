@@ -1,0 +1,42 @@
+
+
+
+<div class=" w-25 mt-5 mx-auto">
+<h4 class="text-center">Cadastrar um Usuario <i style="color: rgb(1, 81, 255);" class="fas fa-user-plus"></i></h4>
+</div>
+
+<hr>
+
+<form method="POST"  action="/cadastro" class="w-50 mx-auto mt-4">  
+{{#each erros}}
+
+<div class="alert alert-danger">{{texto}}</div>
+
+{{else}}
+
+{{/each}}  
+
+    <div class="form-group ">
+    <label>Nome:</label>
+    <input type="text"  class="form-control" id="nome" name="nome" placeholder="Seu nome">
+    <small id="erro-nome" class="text-danger"></small>
+    </div>
+
+    <div class="form-group">
+    <label>Idade:</label>
+    <input type="number"   class="form-control" id="idade" name="idade" placeholder="Sua idade"> 
+    <small id="erro-idade" class="text-danger"></small>   
+    </div> 
+
+    <div class="form-group">
+    <label>Email:</label>
+    <input type="email"   class="form-control" id="email" name="email" placeholder="Seu email">  
+   <small id="erro-email" class="text-danger"></small>  
+    </div>
+  
+        <a>
+        <button type="submit" id="button" class="btn btn-outline-dark">Cadastrar <i class="fas fa-check"></i></button>
+        </a>
+
+</form>
+

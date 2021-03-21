@@ -1,0 +1,36 @@
+<h4 class="text-center">Lista de Cadastros</h4>
+<div class="card  w-75 mx-auto">
+    <div class="card-body">
+        <table class="table">
+          {{>_msg}}
+  <thead>
+    <tr>
+      <th scope="col">Nome</th>
+      <th scope="col">Idade</th>
+      <th scope="col">Email</th>
+      <th scope="col">Editar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+    {{#each cadastros}}
+      <td>{{nome}}</td>
+      <td>{{idade}}</td>
+      <td>{{email}}</td>
+      <td>
+          <a href="/editar2/{{_id}}"><button class="btn btn-outline-info btn-sm"><i class="far fa-edit"></i></button></a>
+          <a href="/deletar/{{_id}}"><button class="btn btn-outline-danger btn-sm"><i class="fas fa-user-times"></i></i></button></a>
+      </td>
+    </tr>
+    
+     {{else}}
+      <div class="alert alert-info w-50 text-center mx-auto" role="alert">
+      Nenhum Usuario registrado!
+      </div>
+    {{/each}}
+  </tbody>
+</table>
+<a href="/cadastrar"><button class="btn btn-outline-dark btn-sm">Cadastrar Novo Usuario</button></a>
+        
+    </div>
+</div>
